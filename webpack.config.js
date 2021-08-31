@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -8,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -38,10 +38,6 @@ module.exports = {
           'css-loader',
         ],
       },
-      {
-        test: /\.scss$/,
-        loader: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
     ],
   },
   plugins: [
@@ -58,6 +54,7 @@ module.exports = {
       directory: path.join(__dirname, 'public'),
     },
     compress: true,
+    historyApiFallback: true,
     port: 3006,
   },
 };
