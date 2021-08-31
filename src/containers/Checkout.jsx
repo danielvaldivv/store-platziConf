@@ -9,7 +9,6 @@ const Checkout = () => {
 
   const handleRemove = (product, index) => () => {
     removeFromCart(product, index);
-    console.log(cart[index]);
   };
 
   const handleSumTotal = () => {
@@ -37,7 +36,7 @@ const Checkout = () => {
           </div>
           ))}
       </div>
-      {cart.length > 0 
+      {cart.length > 0
         && (
           <div className="Checkout-sidebar">
             <h3>{`Precio Total: $ ${handleSumTotal()}`}</h3>
