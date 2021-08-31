@@ -6,24 +6,20 @@ import '../styles/components/Header.css';
 const Home = () => {
   const { state } = useContext(AppContext);
 
-  const {  cart } = state
+  const { cart } = state;
 
-  return(
+  return (
     <div className="Header">
       <h1 className="Header-title">
-        <Link to="/">
-          PlatziConf Merch
-        </Link>
+        <Link to="/">PlatziConf Merch</Link>
       </h1>
       <div className="Header-checkout">
         <Link to="/Checkout">
-          <i className="fas fa-shopping-basket"/>
+          <i className="fas fa-shopping-basket" />
         </Link>
-        {
-          cart.length > 0 && <div className="Header-alert">{cart.length}</div>
-        }
+        {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
       </div>
     </div>
-  )
-}
-export default Home
+  );
+};
+export default Home;
