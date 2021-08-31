@@ -3,10 +3,10 @@ import '../styles/components/Footer.css'
 
 const Footer = () => (
     <div className="Footer">
-      <h1 className="Footer-title">Platzi Conf Merch</h1>
-      <div className="Footer-copy">
+      <p className="Footer-title">Platzi Conf Merch</p>
+      <p className="Footer-copy">
         Todos los izquierdos Reservados
-      </div>
+      </p>
     </div>
   )
 
