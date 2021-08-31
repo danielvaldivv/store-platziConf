@@ -55,14 +55,13 @@ const Payment = ({ history }) => {
       ))}
       <div className="Payment-button">
         <PayPalButton
-          paypalOptions={paypalOptions}
-          buttonStyles={buttonStyles}
-          amount={handleSumTotal()}
-          onPaymentStart={()=>console.log('Start Payment')}
-          onPaymentSuccess={data => handlePaymentSuccess(data)}
-          onPaymentError={error => console.log(error)}
-          onPaymentCancel={data => console.log(data)}
-        />
+              paypalOptions={paypalOptions}
+              buttonStyles={buttonStyles}
+              amount={handleSumTotal()}
+              onSuccess={data => handlePaymentSuccess(data)}
+              onError={error => console.log(error)}
+              onCancel={data => console.log(data)}
+            />
       </div>
     </div>
   </div>
